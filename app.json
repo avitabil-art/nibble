@@ -1,0 +1,75 @@
+{
+  "expo": {
+    "name": "Nibble",
+    "slug": "nibble",
+    "scheme": "nibble",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "description": "Your pocket kitchen sidekick that makes cooking and shopping effortless. From recipe to cart.",
+    "primaryColor": "#48C78E",
+    "backgroundColor": "#FAFAFA",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vibecode.nibble",
+      "buildNumber": "6",
+      "requireFullScreen": false,
+      "associatedDomains": [
+        "applinks:nibble.app"
+      ],
+      "jsEngine": "hermes",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app may use the camera for enhanced features and functionality.",
+        "NSContactsUsageDescription": "This app may access contacts to provide personalized experiences.",
+        "NSCalendarsUsageDescription": "This app may access calendar data to provide scheduling features.",
+        "NSLocationWhenInUseUsageDescription": "This app may use location services to provide location-based features."
+      },
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.nibble.app",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#48C78E"
+      }
+    },
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#48C78E"
+    },
+    "icon": "./icon.png",
+    "plugins": [
+      "expo-asset",
+      "expo-font",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "newArchEnabled": true,
+            "flipper": false
+          },
+          "android": {
+            "newArchEnabled": true,
+            "enableProguardInReleaseBuilds": true,
+            "enableShrinkResourcesInReleaseBuilds": true
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "3911e1cd-b9f7-45c4-95b8-008fb16314a2"
+      }
+    }
+  }
+}

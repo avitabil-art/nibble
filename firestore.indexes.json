@@ -1,0 +1,39 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "sharedLists",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "shareId",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "listAccess",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "listId",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "listChanges",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "listId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "timestamp",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

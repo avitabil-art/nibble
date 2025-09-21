@@ -1,0 +1,21 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Shared lists - accessible to anyone with a valid user ID
+    // In production, this should be more restrictive with proper auth
+    match /sharedLists/{listId} {
+      allow read, write: if true; // Simplified for now - will add proper auth later
+    }
+    
+    // List access records - track who has access to what
+    match /listAccess/{accessId} {
+      allow read, write: if true; // Simplified for now
+    }
+    
+    // List changes for sync history
+    match /listChanges/{changeId} {
+      allow read, write: if true; // Simplified for now
+    }
+  }
+}
